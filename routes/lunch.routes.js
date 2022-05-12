@@ -162,7 +162,7 @@ router.delete('/groups', (req, res) => {
         .catch((err) => res.status(500).json(err))
 })
 
-//// Create multiple eaters ////
+//// Create multiple eaters //// Extra Feature!!! 
 
 router.post('/many-eaters', (req, res) => {
 
@@ -177,7 +177,7 @@ router.post('/many-eaters', (req, res) => {
 
 })
 
-//// Create multiple restaurants ////
+//// Create multiple restaurants //// Extra Feature!!! 
 
 router.post('/many-restaurants', (req, res) => {
 
