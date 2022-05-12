@@ -10,7 +10,7 @@ const Restaurant = require("../models/restaurant.model")
 //---Routes---//
 
 router.get("/", (req, res) => {
-
+   
     res.json("Cabify LunchService Backend")
 })
 
