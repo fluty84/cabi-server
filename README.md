@@ -19,6 +19,11 @@ https://cabify-restaurant.netlify.app/
     
     Run `npm run dev` to start the server with demon or `npm start` to run without it.
     
+        .ENV configuration:
+            PORT = 5005
+            ORIGIN = https://cabify-restaurant.netlify.app
+            MONGODB_URI = mongodb+srv://cabify:hiremeplease@cluster0.yqsmi.mongodb.net/cabi-restaurant
+
     - Proyect have two suits of tests made with JEST: 
         
             Run `npm test routes` to test API routes
@@ -50,7 +55,7 @@ https://cabify-restaurant.netlify.app/
     /many-restaurants - POST => Creates the specified number of restaurants
     
 ###NOTE:
-    Inside the alternative-version folder you can find the files to be replaced from another alternative 
+    Inside the alternative-version.zip you can find the example files from another alternative 
     project solution. 
     In this case instead of pushing the strings with the restaurant and eater names to the group, the objectIDs 
     are pushed, obtaining a more complete database, but which does not comply with the specifications of the exercise. 
