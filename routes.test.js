@@ -41,19 +41,19 @@ test("GET EATERS => Call '/eaters' whith GET method returns an array of objects 
 test("CREATE RESTAURANT => Create new restaurant returns {message:'created'}",
     async () => {
         const name = "eater1"
-        const adress = "email@email.com"
+        const address = "email@email.com"
 
-        const response = await LunchService.createRestaurant(name, adress)
+        const response = await LunchService.createRestaurant(name, address)
         expect(response.data).toMatchObject({ message: "created" })
     }
 )
 
-test("GET RESTAURANTS => Call '/restaurants' whith GET method returns an array of objects with keys 'name' and 'adress'",
+test("GET RESTAURANTS => Call '/restaurants' whith GET method returns an array of objects with keys 'name' and 'address'",
     async () => {
         const response = await LunchService.getAllRestaurants()
         response.data.forEach(element => {
             expect(Object.keys(element)).toContain("name")
-            expect(Object.keys(element)).toContain("adress")
+            expect(Object.keys(element)).toContain("address")
         })
     }
 )

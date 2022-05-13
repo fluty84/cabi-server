@@ -15,7 +15,7 @@ test(`CretaeEquilibratedGroups =>
 
     restaurants = [{
         name:"testTaurant",
-        adress:"C/ test nº0"
+        address:"C/ test nº0"
     }]
     eaters = [{
         name:"test1",
@@ -32,7 +32,7 @@ test(`CretaeEquilibratedGroups =>
     , () => {
         const restaurants = [{
             name: "testTaurant",
-            adress: "C / test nº0"
+            address: "C / test nº0"
         }]
         const eaters = [{
             name: "test1",

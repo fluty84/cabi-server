@@ -6,10 +6,10 @@ const restaurantSchema = new Schema(
       type: String,
       required: true
     },
-    adress: {
-      type: String, 
+    address: {
+      type: String,
       required: true
-    } 
+    }
   },
   {
     timestamps: true,

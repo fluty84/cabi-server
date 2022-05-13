@@ -21,8 +21,8 @@ class LunchService {
         return this.api.get('/eaters')
     }
 
-    createRestaurant = (name, adress) => {
-        return this.api.post('/restaurants', { name, adress })
+    createRestaurant = (name, address) => {
+        return this.api.post('/restaurants', { name, address })
     }
 
     getAllRestaurants = () => {

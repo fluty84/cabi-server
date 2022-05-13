@@ -10,7 +10,7 @@ const Restaurant = require("../models/restaurant.model")
 //---Routes---//
 
 router.get("/", (req, res) => {
-   
+
     res.json("Cabify LunchService Backend")
 })
 
@@ -58,10 +58,10 @@ router.delete('/eaters', (req, res) => {
 
 router.post('/restaurants', (req, res) => {
 
-    const { name, adress } = req.body
+    const { name, address } = req.body
 
     Restaurant
-        .create({ name, adress })
+        .create({ name, address })
         .then(() => res.json({ message: "created" }))
         .catch((err) => res.status(500).json(err))
 })
@@ -126,7 +126,7 @@ router.post('/create_groups', (req, res) => {
             const groups = createEquilibratedGroups(restaurants, cabiEaters)
 
             //const groups = data.filter( elm => elm.eaters.length)
-           
+
             Group
                 .collection.insertMany(groups)
                 .then(() => res.json(groups))
@@ -144,11 +144,12 @@ router.get('/groups', (req, res) => {
     Group
         .find()
         .then(groups => {
-            
+
             if (!groups.length) {
                 res.json({ message: "group not created yet" })
             } else {
-            res.json(groups)}
+                res.json(groups)
+            }
         })
         .catch((err) => res.status(500).json(err))
 })

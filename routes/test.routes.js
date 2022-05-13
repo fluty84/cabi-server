@@ -1,6 +1,6 @@
 const router = require("express").Router()
 
-const {createManyEaters, createManyRestaurants, shuffle, createEquilibratedGroups} = require('../utils')
+const { createManyEaters, createManyRestaurants, shuffle, createEquilibratedGroups } = require('../utils')
 
 //---Models---//
 const Eater = require('../models/__mock_models/__mock_eater.model')
@@ -58,10 +58,10 @@ router.delete('/eaters', (req, res) => {
 
 router.post('/restaurants', (req, res) => {
 
-    const { name, adress } = req.body
+    const { name, address } = req.body
 
     Restaurant
-        .create({ name, adress })
+        .create({ name, address })
         .then(() => res.json({ message: "created" }))
         .catch((err) => res.status(500).json(err))
 })
@@ -164,8 +164,8 @@ router.delete('/groups', (req, res) => {
 
 //// Create multiple eaters ////
 
-router.post('/many-eaters', (req, res)=>{
-    
+router.post('/many-eaters', (req, res) => {
+
     const number = req.body.number
 
     const eaters = createManyEaters(number)

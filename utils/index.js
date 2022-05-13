@@ -1,5 +1,5 @@
 module.exports = {
-    shuffle(array){ // Fisher-Yates Algoritm //
+    shuffle(array) { // Fisher-Yates Algoritm //
         let currentIndex = array.length, randomIndex
 
         while (currentIndex != 0) {
@@ -12,11 +12,11 @@ module.exports = {
         }
 
         return array
-    } ,
+    },
 
 
-    createEquilibratedGroups(restaurants, people){
-        
+    createEquilibratedGroups(restaurants, people) {
+
         const extraEatersCount = people.length % restaurants.length
         const groupMinSize = (people.length - extraEatersCount) / restaurants.length
         const extraEaters = []
@@ -55,7 +55,7 @@ module.exports = {
             round += groupMinSize
 
             payload.push({ restaurant, leader, eaters })
-           
+
         })
         // cleaning groups without eaters //
 
@@ -66,13 +66,13 @@ module.exports = {
     },
 
 
-    createManyEaters(number){
+    createManyEaters(number) {
         const eaters = []
 
         for (let i = 0; i < number; i++) {
-            eaters.push({ name: `person${i+1}`, email: `email${i+1}@cabify.com` })
+            eaters.push({ name: `person${i + 1}`, email: `email${i + 1}@cabify.com` })
         }
-        
+
         return eaters
     },
 
@@ -80,7 +80,7 @@ module.exports = {
         const restaurants = []
 
         for (let i = 0; i < number; i++) {
-            restaurants.push({ name: `Restaurant ${i+1}`, adress: `C/del desencanto nº${i+1}, Madrid` })
+            restaurants.push({ name: `Restaurant ${i + 1}`, address: `C/del desencanto nº${i + 1}, Madrid` })
         }
 
         return restaurants
